@@ -69,7 +69,7 @@ Poemas>Poema1 {
     background-color: #140E0A;
     align-items: center;
     width: 60rem;
-    height: 25rem;
+    height: 24rem;
     gap: 1.5rem;
     padding: 1%;
     position: relative;
@@ -152,7 +152,7 @@ div.trecho>audio,
         display: flex;
         flex-direction: column;
         width: 17rem;
-        height: 31rem;
+        max-height: 31rem;
         padding: unset;
     }
 
