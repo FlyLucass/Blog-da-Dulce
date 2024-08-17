@@ -1,89 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+
+
 body {
     background-color: #282729;
+    margin-bottom: 5%;
 }
 
 h2 {
-    font-size: xx-large;
+    font-size: x-large;
     text-align: left;
     color: aliceblue;
 }
 
 .MiniBio {
     display: flex;
-    margin-left: 100px;
-    margin-right: 50px;
-
+    flex-direction: row;
+    align-items: center;
+    padding: 3%;
+    gap: 3rem;
+    flex-wrap: nowrap;
+    position: relative;
 }
 
-biografia {
+div.MiniBio>article {
     color: white;
     font: medium justify;
     font-style: italic;
-    width: 70%;
-    margin-right: 15px;
-    line-height: 1.4;
+    line-height: 1.5;
 
 }
 
-foto {
-    width: 30%;
-    margin-left: 30px;
-    margin-top: 25px;
 
-}
-
-foto img {
-    height: 355px;
-    width: 350px;
+div.MiniBio>figure img {
+    height: 20rem;
+    width: 20rem;
     transform: rotate(10deg);
 }
 
 #ref {
-    margin-top: 10%;
     margin-bottom: 5%;
 }
 
 Poemas h3 {
-    text-align: center;
     font-style: italic;
     color: aliceblue;
 
 }
 
-Poemas Poema1 {
+Poemas {
     display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
-    background-color: #140E0A;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
 
 }
 
-Poema1 imagem img {
-    width: 300px;
-    height: 350px;
-    margin: 5px;
+Poemas>Poema1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #140E0A;
+    align-items: center;
+    width: 60rem;
+    height: 24rem;
+    gap: 1.5rem;
+    padding: 1%;
+    position: relative;
 
+}
+
+Poema1>figure>img {
+    width: 18rem;
+    height: 22rem;
 
 }
 
 .trecho {
     display: grid;
     place-items: center;
+    gap: 1rem;
 
 }
 
-Poema1 div.trecho poema {
-    font-size: 19px;
-    line-height: 1.5;
+div.trecho>article {
+    font-size: large;
+    line-height: 1.4;
     text-align: center;
-    padding: 20px;
-    color: white
+    font-family: 'Times New Roman', Times, serif;
+    color: wheat;
 }
 
-Poema1 div.trecho audio {
-    margin-bottom: 20px;
-    height: 20px;
+div.trecho>audio,
+::-webkit-media-controls-panel {
+    height: 1.4rem;
+    background-color: wheat;
+    border-radius: 1rem;
+
+
+}
+
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {
+
+    h2 {
+        font-size: medium;
+        margin-bottom: 1rem;
+    }
+
+    div.MiniBio {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        gap: 0.5rem;
+    }
+
+    div.MiniBio>figure img {
+        transform: unset;
+        height: 10rem;
+        width: 10rem;
+    }
+
+    div.MiniBio>article {
+        color: white;
+        font: 0.7rem justify;
+        font-style: italic;
+        line-height: 1.4;
+
+    }
+
+    #ref {
+        margin-top: 10%;
+    }
+
+    Poemas {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    Poemas h3 {
+        font-size: smaller;
+    }
+
+    Poemas>Poema1 {
+        display: flex;
+        flex-direction: column;
+        width: 17rem;
+        height: 31rem;
+        padding: unset;
+    }
+
+    Poema1>figure>img {
+        width: 15rem;
+        height: 10rem;
+
+    }
+
+    div.trecho>article {
+        font-size: 0.7rem;
+    }
+
+    div.trecho>audio,
+    ::-webkit-media-controls-panel {
+        width: 16rem;
+        height: 1rem;
+    }
 
 }
