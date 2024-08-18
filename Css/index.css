@@ -137,27 +137,28 @@ div.trecho>audio,
 
     #ref {
         margin-top: 10%;
+
     }
 
     Poemas {
         align-items: center;
-        gap: 1rem;
+        gap: 0.5rem;
     }
 
     Poemas h3 {
-        font-size: smaller;
+        font-size: x-small;
     }
 
     Poemas>Poema1 {
         display: flex;
         flex-direction: column;
         width: 17rem;
-        max-height: 31rem;
+        height: 33rem;
         padding: unset;
     }
 
     Poema1>figure>img {
-        width: 15rem;
+        width: 10rem;
         height: 10rem;
 
     }
